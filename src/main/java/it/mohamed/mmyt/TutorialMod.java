@@ -1,6 +1,7 @@
 package it.mohamed.mmyt;
 
 import com.mojang.logging.LogUtils;
+import it.mohamed.mmyt.item.ModItem;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -24,6 +25,7 @@ public class TutorialMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItem.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
