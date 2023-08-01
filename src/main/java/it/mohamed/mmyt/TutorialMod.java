@@ -1,6 +1,7 @@
 package it.mohamed.mmyt;
 
 import com.mojang.logging.LogUtils;
+import it.mohamed.mmyt.block.ModBlocks;
 import it.mohamed.mmyt.item.ModCreativeModTabs;
 import it.mohamed.mmyt.item.ModItem;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -26,6 +27,7 @@ public class TutorialMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModCreativeModTabs.register(modEventBus);
         ModItem.register(modEventBus);
+        ModBlocks.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);

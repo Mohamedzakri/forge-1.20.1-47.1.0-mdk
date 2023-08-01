@@ -1,6 +1,7 @@
 package it.mohamed.mmyt.item;
 
 import it.mohamed.mmyt.TutorialMod;
+import it.mohamed.mmyt.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -23,7 +24,7 @@ public class ModCreativeModTabs {
 
                         pOutput.accept(Items.DIAMOND);
 
-
+                        pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                     })
                     .build());
 
